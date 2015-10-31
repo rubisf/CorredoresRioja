@@ -1,0 +1,23 @@
+{# empty Twig template #}
+{% extends '::base.html.twig' %}
+
+{% block penstanias2 %}
+    <div id="menu" >
+        <ul>
+            <li>
+                <a href=" {{ path('corredores_rioja_corredores_carrerasB') }}">Portada<br/></a>
+            </li>
+            <li>
+                <a href="{{ path('corredores_rioja_corredores_carreras') }}">Carreras<br/></a>
+            </li>
+            <li>
+                <a href="/es/corredores/miscarreras">Mis carreras<br/></a>
+            </li>
+            <li>
+                <a href="{{ path('usuario_login') }}">Login<br/></a>
+            </li>
+        </ul>
+        <div style="clear: left;"></div>
+    </div>
+</div>     
+    {% endblock %}

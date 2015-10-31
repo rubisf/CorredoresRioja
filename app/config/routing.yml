@@ -1,0 +1,9 @@
+corredores_rioja_corredores:
+    resource: "@CorredoresRiojaCorredoresBundle/Resources/config/routing.yml"
+    prefix:   /corredores
+    
+my_yaml_i18n_routes:
+    resource: "@CorredoresRiojaCorredoresBundle/Resources/config/routing_i18n.yml"
+    type: be_simple_i18n
+    prefix: /{_locale}
+

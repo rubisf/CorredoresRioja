@@ -1,0 +1,28 @@
+{% extends 'CorredoresRiojaCorredoresBundle:Corredores:zonacorredores.htm.twig' %}
+
+{% block cuerpo %}
+
+    {% if error %}
+        <div>{{ error.messageKey | trans(error.messageData, 'security') }}</div>
+    
+    {% endif %}
+    
+    {% if app.user %}
+     Ya esta logueado como {{ app.user.username }}
+      {% else %}
+          No estás logueado
+    {% endif %}
+    
+    <div class="nuevo_izda">
+    <form action="{{path('usuario_login_check')}}" method="post">
+        <label for="username"> Username:</label>
+        <input type="text" id="username" name="_username" value="{{last_username}}" /> <br>
+        <label for="password">Password:</label>
+        <input type="password"id="password"name="_password"/><br>
+        <button type="submit">login</button>
+    </form>
+    <div  class="registrob">
+            <a href="{{path("usuario_register")}}">REGISTRESE</a>
+    </div> 
+    </div>
+{% endblock %}

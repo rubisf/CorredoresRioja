@@ -1,0 +1,9 @@
+{% extends 'CorredoresRiojaCorredoresBundle:Corredores:zonacorredores.htm.twig' %}
+
+{% block cuerpo %}
+    <form name="register" action="{{ path('usuario_registerValidate') }}" method="post" {{ form_enctype(formulario) }}>
+     {{form_widget(formulario)}}
+    </form>
+
+
+{% endblock %}

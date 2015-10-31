@@ -1,0 +1,38 @@
+{% extends 'CorredoresRiojaCorredoresBundle:Corredores:zonacorredores.htm.twig' %}
+
+{% block cuerpo %}
+    {%if carrera%}
+
+        {% include 'CorredoresRiojaCorredoresBundle:Corredores:carrerasimple.htm.twig' with {'carrera' : carrera} %}
+        
+        {% if(carrera.inscripcionAbierta == 1) %}
+            BOTON DE INSCRIBIR<br>
+            
+            PARTICIPANTES<br><br>
+            
+            {% for key, arr in participantes %}
+                {{ arr[0].nombreCompleto}} <br>
+            {% endfor %}
+            
+         
+        {% else %}
+            
+            <br><br>
+            CLASIFICACION<br><br>
+            
+            	
+            {% set numb = 1 %}
+            {% for key, arr in participantes %}
+                {{numb}}.{{ arr[0].nombreCompleto}} {{ arr[1] }} {{ arr[2] }}<br>
+                {% set numb = numb+1 %}
+            {% endfor %}
+            
+            
+            
+        {% endif %}
+        
+    {%else%}
+        Carrera incorrecta
+    {%endif%}
+
+{% endblock %}

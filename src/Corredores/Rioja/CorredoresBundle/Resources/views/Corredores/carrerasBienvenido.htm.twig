@@ -1,0 +1,13 @@
+{% extends 'CorredoresRiojaCorredoresBundle:Corredores:zonacorredores.htm.twig' %}
+
+{% block cuerpo %}
+
+    <h2>Bienvenido a corredores por la Rioja</h2>
+    
+    {% for carrera in carreras %}
+
+        {% include 'CorredoresRiojaCorredoresBundle:Corredores:carrerasimple.htm.twig' with{'carrera': carrera} %}
+
+    {% endfor  %}
+    
+{% endblock %}

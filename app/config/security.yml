@@ -1,0 +1,38 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        corredores:
+            id: corredores_user_provider
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        default:
+            pattern: ^/*
+            provider: corredores
+            anonymous: ~
+            http_basic: ~
+            logout:
+                path: usuario_logout
+                target: usuario_login
+            form_login:
+                login_path: usuario_login
+                check_path: usuario_login_check
+                default_target_path: corredores_rioja_corredores_homepage
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+            algorithm: bcrypt
+            cost: 12
+        Corredores\Rioja\CorredoresBundle\Security\CorredorUser:
+            algorithm: bcrypt
+            cost: 12
+        Corredores\Rioja\CorredoresDomain\Model\Corredor:
+            algorithm: bcrypt
+            cost: 12
+    access_control:
+        - { path: ^/corredores/admin, roles: ROLE_CORREDOR }
+
+

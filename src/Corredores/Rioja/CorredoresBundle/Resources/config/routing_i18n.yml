@@ -1,0 +1,8 @@
+corredores_rioja_corredores_homepage:
+    locales:  { en: /races, es: /carreras }
+    defaults: { _controller: CorredoresRiojaCorredoresBundle:Carrera:mostrarTodasCarreras }
+   
+    
+corredores_rioja_corredores_carrerasB:
+    locales:  { en: /races, es: /carreras }
+    defaults: { _controller: CorredoresRiojaCorredoresBundle:Carrera:mostrarTodasCarreras }

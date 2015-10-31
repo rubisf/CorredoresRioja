@@ -1,0 +1,35 @@
+
+    
+corredores_rioja_corredores_carrera:
+    path:     /carrera/{slug}
+    defaults: { _controller: CorredoresRiojaCorredoresBundle:Carrera:mostrarCarrera }
+
+
+
+corredores_rioja_corredores_carreras:
+    path:     /carreras
+    defaults: { _controller: CorredoresRiojaCorredoresBundle:Carrera:mostrarCarreras }
+    
+admin:
+    path:   /admin
+    defaults: {_controller: CorredoresRiojaCorredoresBundle:Carrera:admin}
+    
+
+usuario_register:
+    path: /register
+    defaults: {_controller: CorredoresRiojaCorredoresBundle:Carrera:register}
+    
+usuario_registerValidate:
+    path: /registerValidate
+    defaults: {_controller: CorredoresRiojaCorredoresBundle:Carrera:registerValidate}
+    
+usuario_login:
+    path: /login
+    defaults: {_controller: CorredoresRiojaCorredoresBundle:Carrera:login}
+    
+usuario_login_check:
+    path: /login_check
+
+usuario_logout:
+    path: /logout
+

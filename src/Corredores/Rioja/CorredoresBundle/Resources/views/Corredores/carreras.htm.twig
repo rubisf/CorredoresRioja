@@ -1,0 +1,21 @@
+{% extends 'CorredoresRiojaCorredoresBundle:Corredores:zonacorredores.htm.twig' %}
+
+{% block cuerpo %}
+
+    <h2>Carreras por disputar</h2>
+    
+    {% for carrera in carreras %}
+
+        {% include 'CorredoresRiojaCorredoresBundle:Corredores:carrerasimple.htm.twig' with{'carrera': carrera} %}
+
+    {% endfor  %}
+    
+    <h2>Carreras disputadas</h2>
+    
+    {% for carrera in carrerasD %}
+
+        {% include 'CorredoresRiojaCorredoresBundle:Corredores:carrerasimple.htm.twig' with{'carrera': carrera} %}
+
+    {% endfor  %}
+
+{% endblock %}
