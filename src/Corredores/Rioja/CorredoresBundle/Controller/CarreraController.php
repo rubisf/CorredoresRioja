@@ -23,6 +23,21 @@ public function mostrarCarreraAction($slug){
     $carrera=$this->get('carrerarepository')->buscarCarreraPorSlug($slug);
     //PILLO LOS CORREDORES INSCRITOS
     $participantes=$this->get('participanterepository')->buscarParticipantesDeCarrera($carrera);
+    
+
+    usort($participantes, function ($a,$b){ 
+        
+                if ($a[2] == $b[2]) {
+                return 0;
+            }
+            return ($a[2] > $b[2]) ? -1 : 1;
+    });
+
+    for($i=0;$i<sizeof($participantes);$i++){
+        if(isset($participantes[$i][1]))
+            $participantes[$i][1] = gmdate("H:i:s", (int)$participantes[$i][1]);
+    }
+    
     return $this->render( 'CorredoresRiojaCorredoresBundle:Corredores:carrera.htm.twig' , array ( 'carrera' => $carrera, 'participantes' => $participantes ));
 }
 

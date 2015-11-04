@@ -41,8 +41,8 @@ class InMemoryParticipanteRepository {
         $this->inscribirParticipanteEnCarrera($this->corredores[1], $this->carreras[0]);
         $this->inscribirParticipanteEnCarrera($this->corredores[1], $this->carreras[1]);
         
-        $this->setTiempoEnCarrera($this->corredores[0], $this->carreras[0], 123412, 123);
-        $this->setTiempoEnCarrera($this->corredores[1], $this->carreras[0], 123412, 123);
+        $this->setTiempoEnCarrera($this->corredores[0], $this->carreras[0], 3708, 123);
+        $this->setTiempoEnCarrera($this->corredores[1], $this->carreras[0], 2615, 123);
         
     }
     

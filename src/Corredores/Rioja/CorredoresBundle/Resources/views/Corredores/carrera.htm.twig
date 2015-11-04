@@ -22,8 +22,13 @@
             
             	
             {% set numb = 1 %}
+            
+            
             {% for key, arr in participantes %}
-                {{numb}}.{{ arr[0].nombreCompleto}} {{ arr[1] }} {{ arr[2] }}<br>
+                {% set seconds = arr[1]  % 60 %}
+                {% set hours = arr[1]  % 3600 %}
+                {% set mins = (arr[1] - (hours*3600))  % 3600 %}
+                {{numb}}.{{ arr[0].nombreCompleto}} {{ arr[1]}} {{ arr[2] }}<br>
                 {% set numb = numb+1 %}
             {% endfor %}
             
