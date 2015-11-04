@@ -1,6 +1,6 @@
 <img src="{{ asset('bundles/corredoresriojacorredores/images/'~carrera.imagen~'') }} " /><br>
-Organizador: {{ carrera.organizador.nombreOrganizador }}<br>
-Nombre: <a href="{{ path('corredores_rioja_corredores_carrera', {'slug': carrera.getslug2}) }}"> {{ carrera.nombrecarrera }} </a><br>
-Distancia: {{ carrera.kms }} kms<br>
-Descripcion: {{ carrera.descripcion }}<br>
-Fecha de realización: {{ carrera.fechaRealizacion | date('d/m/Y  H:i:s') }}<br><br><hr>
+{{ 'Organizador' | trans }}: {{ carrera.organizador.nombreOrganizador }}<br>
+{{ 'Nombre' | trans }}: <a href="{{ path('corredores_rioja_corredores_carrera', {'slug': carrera.getslug2}) }}"> {{ carrera.nombrecarrera }} </a><br>
+{{ 'Distancia' | trans }}: {{ carrera.kms }} kms<br>
+{{ 'Descripcion' | trans }}: {{ carrera.descripcion }}<br>
+{{ 'Fecha de realización' | trans }}: {{ carrera.fechaRealizacion | date('d/m/Y  H:i:s') }}<br><br><hr>
