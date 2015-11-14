@@ -2,9 +2,16 @@ menu1_1: Runners zone
 menu1_2: Organizers zone
 menu1_3: Intranet
 
+menu2_1: Main Page
+menu2_2: Races
+menu2_3: My Races
+menu2_4: Login
+
 Bienvenido a corredores por la Rioja: Runners in La Rioja
 Organizador: Organizer
 Nombre: Name
 Distancia: Distance
 Descripcion: Description
 Fecha de realización: Date
+Carreras recientes: Recent races
+Carreras próximas: Incoming races

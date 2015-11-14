@@ -2,7 +2,7 @@
 
 {% block cuerpo %}
 
-    <h2>Carreras por disputar</h2>
+    <h2>{{ 'Carreras próximas' | trans}}</h2>
     
     {% for carrera in carreras %}
 
@@ -10,7 +10,7 @@
 
     {% endfor  %}
     
-    <h2>Carreras disputadas</h2>
+    <h2>{{ 'Carreras recientes' | trans}}</h2>
     
     {% for carrera in carrerasD %}
 

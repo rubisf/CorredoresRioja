@@ -33,6 +33,6 @@ security:
             algorithm: bcrypt
             cost: 12
     access_control:
-        - { path: ^/corredores/admin, roles: ROLE_CORREDOR }
+        - { path: ^/(es|en)/(myRaces|misCarreras), roles: ROLE_CORREDOR }
 
 

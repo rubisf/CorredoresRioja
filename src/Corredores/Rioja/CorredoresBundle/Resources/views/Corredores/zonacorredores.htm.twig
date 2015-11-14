@@ -5,16 +5,16 @@
     <div id="menu" >
         <ul>
             <li>
-                <a href=" {{ path('corredores_rioja_corredores_carrerasB') }}">Portada<br/></a>
+                <a href="{{ path('corredores_rioja_corredores_homepage') }}">{{ 'menu2_1' | trans }}<br/></a>
             </li>
             <li>
-                <a href="{{ path('corredores_rioja_corredores_carreras') }}">Carreras<br/></a>
+                <a href="{{ path('corredores_rioja_corredores_carreras') }}">{{ 'menu2_2' | trans}}<br/></a>
             </li>
             <li>
-                <a href="/es/corredores/miscarreras">Mis carreras<br/></a>
+                <a href="{{ path('corredores_rioja_mis_carreras') }}">{{ 'menu2_3' | trans}}<br/></a>
             </li>
             <li>
-                <a href="{{ path('usuario_login') }}">Login<br/></a>
+                <a href="{{ path('usuario_login') }}">{{ 'menu2_4' | trans}}<br/></a>
             </li>
         </ul>
         <div style="clear: left;"></div>

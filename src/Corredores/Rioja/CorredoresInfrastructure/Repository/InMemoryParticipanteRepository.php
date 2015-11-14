@@ -76,7 +76,7 @@ class InMemoryParticipanteRepository {
         
         return $lisparticipantes;
     }
-    function buscarCarreraDisputadaDe(Corredor $c){
+    function buscarCarrerasDisputadasDe(Corredor $c){
         $carreras = array();
         
         foreach($this->listado[$c->getDni()] as $slug=>$valor){
@@ -86,7 +86,7 @@ class InMemoryParticipanteRepository {
             }
         }
         
-        return carreras;
+        return $carreras;
     }
     function buscarCarrerasPorDisputarDe(Corredor $c){
         $carreras = array();
@@ -98,7 +98,7 @@ class InMemoryParticipanteRepository {
             }
         }
         
-        return carreras;
+        return $carreras;
     }
     function comprobarInscripcionEnCarrera(Corredor $c, Carrera $d){
         if (isset($this->listado[$c->getDni()][$c->getSlug($d->getNombreCarrera())])){

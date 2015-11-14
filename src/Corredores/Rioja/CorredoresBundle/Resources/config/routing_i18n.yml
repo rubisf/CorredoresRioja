@@ -1,8 +1,33 @@
 corredores_rioja_corredores_homepage:
     locales:  { en: /races, es: /carreras }
     defaults: { _controller: CorredoresRiojaCorredoresBundle:Carrera:mostrarTodasCarreras }
-   
+      
+corredores_rioja_mis_carreras:
+    locales:  { en: /myRaces, es: /misCarreras }
+    defaults: { _controller: CorredoresRiojaCorredoresBundle:Corredor:mostrarMisCarreras }
     
-corredores_rioja_corredores_carrerasB:
-    locales:  { en: /races, es: /carreras }
-    defaults: { _controller: CorredoresRiojaCorredoresBundle:Carrera:mostrarTodasCarreras }
+corredores_rioja_corredores_carrera:
+    locales:  { en: "/race/{slug}", es: "/carrera/{slug}" }
+    defaults: { _controller: CorredoresRiojaCorredoresBundle:Carrera:mostrarCarrera }
+
+corredores_rioja_corredores_carreras:
+    locales:  { en: /allRaces, es: /todasCarreras }
+    defaults: { _controller: CorredoresRiojaCorredoresBundle:Carrera:mostrarCarreras }
+    
+usuario_register:
+    locales: { en: /register, es: /registrar }
+    defaults: {_controller: CorredoresRiojaCorredoresBundle:Carrera:register}
+    
+usuario_registerValidate:
+    locales: { en: /registerValidate, es: /validarRegistro }
+    defaults: {_controller: CorredoresRiojaCorredoresBundle:Carrera:registerValidate}
+    
+usuario_login:
+    locales: { en: /login, es: /login }
+    defaults: {_controller: CorredoresRiojaCorredoresBundle:Carrera:login}
+    
+usuario_login_check:
+    locales: { en: /login_check, es: /comprobarRegistro }
+
+usuario_logout:
+    locales: { en: /logout, es: /logout }
